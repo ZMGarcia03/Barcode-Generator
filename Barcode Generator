@@ -1,0 +1,12 @@
+# Import the modules
+from barcode import EAN13
+from barcode.writer import ImageWriter
+
+# Define the number for the barcode
+number = '5901234123457'
+
+# Create the barcode object with ImageWriter
+my_code = EAN13(number, writer=ImageWriter())
+
+# Save the barcode as PNG file
+my_code.save("new_code")
